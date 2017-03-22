@@ -19,7 +19,7 @@ To add it to your project, run the command
 ionic 2 / Typescript
 --------------------
 
-[see demo](http://corewise.en.made-in-china.com/product/xeqnEcJUsCrw/China-IP65-Rugged-RFID-Smart-Card-Reader-Tablet-PC.html)
+[see demo](https://github.com/mul1sh/corewise-fingerprintauth-demo)
 
 For ionic 2/ typescript users, add the plugin with the same command above, then define an interface Window with a property corewise of data type any. Then also declare a global window variable out side of your class and then use it as follows, preferrably when the ionic platform is ready/ all plugins has been loaded to the DOM.
 
