@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="corewise-plugin-fingerprintauth"
+        version="0.0.2">
+
+  <engines>
+        <engine name="cordova" version=">=3.3.0" />
+  </engines>
+
+  <name>Corewise A370 Fingerprint Authentication</name>
+  <description>
+   Cordova plugin for the fingerprint authentication of the corewise android a370 tablets.
+   </description>
+  <license>MIT</license>
+  <keywords>cordova,corewise,a370, android a370</keywords>
+
+  <js-module src="www/auth.js" name="CorewiseFingerprintAuth">
+    <clobbers target="CorewiseFingerprintAuth" />
+  </js-module>
+
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CorewiseFingerprintAuth">
+        <param name="android-package" value="android_serialport_api.CorewiseFingerprintAuth"/>
+         <param name="onload" value="true"/>
+       
+      </feature>
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+      <!-- 在SDCard中创建与删除文件权限 -->
+      <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+      <!-- 往SDCard写入数据权限 -->
+      <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+      <uses-sdk   android:minSdkVersion="11" android:targetSdkVersion="23"/>
+    </config-file>
+
+    <source-file src="src/android/AsyncFingerprint.java" 
+                 target-dir="src/android_serialport_api"/>
+
+    <source-file src="src/android/DataUtils.java" 
+                 target-dir="src/android_serialport_api"/>
+
+    <source-file src="src/android/FileUtil.java" 
+                 target-dir="src/android_serialport_api"/>
+
+    <source-file src="src/android/FingerprintAPI.java" 
+                 target-dir="src/android_serialport_api"/>
+
+    <source-file src="src/android/LooperBuffer.java" 
+                 target-dir="src/android_serialport_api"/>
+
+    <source-file src="src/android/SerialPort.java" 
+                 target-dir="src/android_serialport_api"/>
+
+    <source-file src="src/android/SerialPortManager.java" 
+                 target-dir="src/android_serialport_api"/>
+
+    <source-file src="src/android/CorewiseFingerprintAuth.java" 
+                 target-dir="src/android_serialport_api"/>
+
+    <source-file src="src/android/ToastUtil.java" 
+                 target-dir="src/android_serialport_api"/>
+
+
+    <!-- set the libs-->
+    <source-file src="libs/microlog4android-1.0.0.jar" target-dir="libs" />
+    <source-file src="libs/DecodeWlt.jar" target-dir="libs" />
+    <source-file src="libs/android-support-v4.jar" target-dir="libs" />
+    <source-file src="libs/guava-14.0.jar" target-dir="libs" />
+    <source-file src="libs/idcardapi.jar" target-dir="libs" />
+
+    <!-- set the jni libs too-->
+   
+    <source-file src="jniLibs/armeabi/libbarcodereader.so" 
+                 target-dir="src/main/jniLibs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libbarcodereader.so" 
+                 target-dir="src/main/jniLibs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libbarcodereader.so" 
+                 target-dir="src/main/jniLibs/mips/"/>    
+    <source-file src="jniLibs/x86/libbarcodereader.so" 
+                 target-dir="src/main/jniLibs/x86/"/>
+
+    <source-file src="jniLibs/armeabi/libbarcodereader.so" 
+                 target-dir="libs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libbarcodereader.so" 
+                 target-dir="libs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libbarcodereader.so" 
+                 target-dir="libs/mips/"/>    
+    <source-file src="jniLibs/x86/libbarcodereader.so" 
+                 target-dir="libs/x86/"/>
+
+    <source-file src="jniLibs/armeabi/libbarcodereader43.so" 
+                 target-dir="src/main/jniLibs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libbarcodereader43.so" 
+                 target-dir="src/main/jniLibs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libbarcodereader43.so" 
+                 target-dir="src/main/jniLibs/mips/"/>    
+    <source-file src="jniLibs/x86/libbarcodereader43.so" 
+                 target-dir="src/main/jniLibs/x86/"/>
+
+    <source-file src="jniLibs/armeabi/libbarcodereader43.so" 
+                 target-dir="libs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libbarcodereader43.so" 
+                 target-dir="libs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libbarcodereader43.so" 
+                 target-dir="libs/mips/"/>    
+    <source-file src="jniLibs/x86/libbarcodereader43.so" 
+                 target-dir="libs/x86/"/>
+
+    <source-file src="jniLibs/armeabi/libbarcodereader44.so" 
+                 target-dir="src/main/jniLibs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libbarcodereader44.so" 
+                 target-dir="src/main/jniLibs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libbarcodereader44.so" 
+                 target-dir="src/main/jniLibs/mips/"/>    
+    <source-file src="jniLibs/x86/libbarcodereader44.so" 
+                 target-dir="src/main/jniLibs/x86/"/>
+
+
+    <source-file src="jniLibs/armeabi/libbarcodereader44.so" 
+                 target-dir="libs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libbarcodereader44.so" 
+                 target-dir="libs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libbarcodereader44.so" 
+                 target-dir="libs/mips/"/>    
+    <source-file src="jniLibs/x86/libbarcodereader44.so" 
+                 target-dir="libs/x86/"/>
+
+    <source-file src="jniLibs/armeabi/libIAL.so" 
+                 target-dir="src/main/jniLibs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libIAL.so" 
+                 target-dir="src/main/jniLibs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libIAL.so" 
+                 target-dir="src/main/jniLibs/mips/"/>    
+    <source-file src="jniLibs/x86/libIAL.so" 
+                 target-dir="src/main/jniLibs/x86/"/>
+
+    <source-file src="jniLibs/armeabi/libIAL.so" 
+                 target-dir="libs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libIAL.so" 
+                 target-dir="libs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libIAL.so" 
+                 target-dir="libs/mips/"/>    
+    <source-file src="jniLibs/x86/libIAL.so" 
+                 target-dir="libs/x86/"/>
+
+    <source-file src="jniLibs/armeabi/libRFID.so" 
+                 target-dir="src/main/jniLibs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libRFID.so" 
+                 target-dir="src/main/jniLibs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libRFID.so" 
+                 target-dir="src/main/jniLibs/mips/"/>    
+    <source-file src="jniLibs/x86/libRFID.so" 
+                 target-dir="src/main/jniLibs/x86/"/>
+
+
+    <source-file src="jniLibs/armeabi/libRFID.so" 
+                 target-dir="libs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libRFID.so" 
+                 target-dir="libs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libRFID.so" 
+                 target-dir="libs/mips/"/>    
+    <source-file src="jniLibs/x86/libRFID.so" 
+                 target-dir="libs/x86/"/>
+
+
+    <source-file src="jniLibs/armeabi/libSDL.so" 
+                 target-dir="src/main/jniLibs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libSDL.so" 
+                 target-dir="src/main/jniLibs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libSDL.so" 
+                 target-dir="src/main/jniLibs/mips/"/>    
+    <source-file src="jniLibs/x86/libSDL.so" 
+                 target-dir="src/main/jniLibs/x86/"/>
+
+     <source-file src="jniLibs/armeabi/libSDL.so" 
+                 target-dir="libs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libSDL.so" 
+                 target-dir="libs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libSDL.so" 
+                 target-dir="libs/mips/"/>    
+    <source-file src="jniLibs/x86/libSDL.so" 
+                 target-dir="libs/x86/"/>
+
+    <source-file src="jniLibs/armeabi/libserial_port.so" 
+                 target-dir="src/main/jniLibs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libserial_port.so" 
+                 target-dir="src/main/jniLibs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libserial_port.so" 
+                 target-dir="src/main/jniLibs/mips/"/>    
+    <source-file src="jniLibs/x86/libserial_port.so" 
+                 target-dir="src/main/jniLibs/x86/"/>
+
+    
+    <source-file src="jniLibs/armeabi/libserial_port.so" 
+                 target-dir="libs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libserial_port.so" 
+                 target-dir="libs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libserial_port.so" 
+                 target-dir="libs/mips/"/>    
+    <source-file src="jniLibs/x86/libserial_port.so" 
+                 target-dir="libs/x86/"/>
+
+    <source-file src="jniLibs/armeabi/libSmartCard.so" 
+                 target-dir="src/main/jniLibs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libSmartCard.so" 
+                 target-dir="src/main/jniLibs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libSmartCard.so" 
+                 target-dir="src/main/jniLibs/mips/"/>    
+    <source-file src="jniLibs/x86/libSmartCard.so" 
+                 target-dir="src/main/jniLibs/x86/"/>
+
+    <source-file src="jniLibs/armeabi/libSmartCard.so" 
+                 target-dir="libs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libSmartCard.so" 
+                 target-dir="libs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libSmartCard.so" 
+                 target-dir="libs/mips/"/>    
+    <source-file src="jniLibs/x86/libSmartCard.so" 
+                 target-dir="libs/x86/"/>
+
+    <source-file src="jniLibs/armeabi/libwltdecode.so" 
+                 target-dir="src/main/jniLibs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libwltdecode.so" 
+                 target-dir="src/main/jniLibs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libwltdecode.so" 
+                 target-dir="src/main/jniLibs/mips/"/>    
+    <source-file src="jniLibs/x86/libwltdecode.so" 
+                 target-dir="src/main/jniLibs/x86/"/>
+
+
+    <source-file src="jniLibs/armeabi/libwltdecode.so" 
+                 target-dir="libs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libwltdecode.so" 
+                 target-dir="libs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libwltdecode.so" 
+                 target-dir="libs/mips/"/>    
+    <source-file src="jniLibs/x86/libwltdecode.so" 
+                 target-dir="libs/x86/"/>
+
+    <source-file src="jniLibs/armeabi/libWltRS.so" 
+                 target-dir="src/main/jniLibs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libWltRS.so" 
+                 target-dir="src/main/jniLibs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libWltRS.so" 
+                 target-dir="src/main/jniLibs/mips/"/>    
+    <source-file src="jniLibs/x86/libWltRS.so" 
+                 target-dir="src/main/jniLibs/x86/"/>
+
+     <source-file src="jniLibs/armeabi/libWltRS.so" 
+                 target-dir="libs/armeabi/"/>
+    <source-file src="jniLibs/armeabi-v7a/libWltRS.so" 
+                 target-dir="libs/armeabi-v7a/"/>
+    <source-file src="jniLibs/mips/libWltRS.so" 
+                 target-dir="libs/mips/"/>    
+    <source-file src="jniLibs/x86/libWltRS.so" 
+                 target-dir="libs/x86/"/>
+  
+   
+  </platform>
+
+ 
+
+</plugin>

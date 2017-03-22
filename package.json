@@ -1,0 +1,46 @@
+{
+  "name": "corewise-plugin-fingerprintauth",
+  "version": "0.0.3",
+  "description": "\n Cordova plugin for the fingerprint authentication of the corewise android a370 tablets.",
+  "cordova": {
+    "id": "corewise-plugin-fingerprintauth",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mul1sh/tambaza-plugin-fingerprintauth.git"
+  },
+  "keywords": [
+    "android fingerprint",
+    "fingerprint scanner",
+    "android fingerprint scanner",
+    "fingerprint",
+    "scanner",
+    "fingerprint scanner",
+    "cordova",
+    "corewise",
+    "corewise android fingerprint scanner",
+    "a370",
+    "android a370",
+    "ecosystem:cordova",
+    "cordova-android",
+    "China IP65 Rugged RFID Smart Card Reader Tablet PC",
+    "IP65",
+    "a370 Tablet",
+    "a370 fingerprint"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.3.0"
+    }
+  ],
+  "author": "Mulili Nzuki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mul1sh/tambaza-plugin-fingerprintauth/issues"
+  },
+  "homepage": "https://github.com/mul1sh/tambaza-plugin-fingerprintauth#readme"
+}
