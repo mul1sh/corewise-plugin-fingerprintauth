@@ -22,7 +22,7 @@ ionic 2 / Typescript
 For ionic 2/ typescript users, add the plugin with the same command above, then define an interface Window with a property corewise of data type any. Then also declare a global window variable out side of your class and then use it as follows, preferrably when the ionic platform is ready/ all plugins has been loaded to the DOM.
 
 	interface Window {
-        corewise: any;
+        CorewiseFingerprintAuth: any;
     }
     declare var window : Window;
     ...
