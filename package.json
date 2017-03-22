@@ -1,6 +1,6 @@
 {
   "name": "corewise-plugin-fingerprintauth",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "description": "\n Cordova plugin for the fingerprint authentication of the corewise android a370 tablets.",
   "cordova": {
     "id": "corewise-plugin-fingerprintauth",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mul1sh/tambaza-plugin-fingerprintauth.git"
+    "url": "git+https://github.com/mul1sh/corewise-plugin-fingerprintauth"
   },
   "keywords": [
     "android fingerprint",
@@ -40,7 +40,7 @@
   "author": "Mulili Nzuki",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mul1sh/tambaza-plugin-fingerprintauth/issues"
+    "url": "https://github.com/mul1sh/corewise-plugin-fingerprintauth/issues"
   },
-  "homepage": "https://github.com/mul1sh/tambaza-plugin-fingerprintauth#readme"
+  "homepage": "https://github.com/mul1sh/corewise-plugin-fingerprintauth#readme"
 }

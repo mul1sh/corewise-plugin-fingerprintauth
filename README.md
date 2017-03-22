@@ -1,4 +1,4 @@
-# tambaza-plugin-fingerprintauth
+# Corewise-plugin-fingerprintauth
 
 This plugin enables fingerprint authentication for the android A370 tablets.      
 
@@ -7,27 +7,27 @@ This plugin enables fingerprint authentication for the android A370 tablets.
 
 Usage
 -----
-The `TambazaFingerprintAuth` object provides functions to make interacting with the fingerprint scanner available in the A370 tablets easier, and has two functions to validate or register a big fingerprint in the tablet via the fingerprint scanner.
+The `CorewiseFingerprintAuth` object provides functions to make interacting with the fingerprint scanner available in the A370 tablets easier, and has two functions to validate or register a big fingerprint in the tablet via the fingerprint scanner.
 
 To add it to your project, run the command
 
-    cordova plugin add tambaza-plugin-fingerprintauth
+    cordova plugin add corewise-plugin-fingerprintauth
 
 Methods
 -------
 
-- TambazaFingerprintAuth.registerFingerprint
-- TambazaFingerprintAuth.validateFingerprint
+- CorewiseFingerprintAuth.registerFingerprint
+- CorewiseFingerprintAuth.validateFingerprint
 
 # API reference
 
-TambazaFingerprintAuth.registerFingerprint
+CorewiseFingerprintAuth.registerFingerprint
 ===========================================
 
 This function registers the fingerprint via the scanner and returns the id of the fingerprint stored in flash memory after registration, 
     
 ```javascript
-TambazaFingerprintAuth
+CorewiseFingerprintAuth
 .registerFingerprint(function(successID){
 	//on fingerprint registration success it returns the id of the fingerprint that has been stored in the flash memory
 	//do something with the id i.e. store it in a db or something
@@ -38,13 +38,13 @@ TambazaFingerprintAuth
 });
 ```
 
-TambazaFingerprintAuth.validateFingerprint
+CorewiseFingerprintAuth.validateFingerprint
 ===========================================
 
 This function validates the fingerprint via the scanner and returns the id of the fingerprint stored in flash memory after validation, 
 
 ```javascript
-TambazaFingerprintAuth
+CorewiseFingerprintAuth
 .validateFingerprint(function(successID){
 	//on fingerprint validation success it returns the id of the fingerprint matched in the flash memory
 	//do something with the id i.e. store it in a db or something
