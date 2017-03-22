@@ -5,20 +5,21 @@ This plugin enables fingerprint authentication for the android A370 tablets.
 [More info about the tablet](http://corewise.en.made-in-china.com/product/xeqnEcJUsCrw/China-IP65-Rugged-RFID-Smart-Card-Reader-Tablet-PC.html)
 
 
-Usage
------
+# Usage
+
+ionic 1 / ES5 javascript
+------------------------
+
 The `CorewiseFingerprintAuth` object provides functions to make interacting with the fingerprint scanner available in the A370 tablets easier, and has two functions to validate or register a big fingerprint in the tablet via the fingerprint scanner.
 
 To add it to your project, run the command
 
     cordova plugin add corewise-plugin-fingerprintauth
 
+ionic 2 / Typescript
+--------------------
 
-To add it to your project, run the command
-
-    cordova plugin add corewise-plugin-fingerprintauth
-
-For ionic 2/ typescript users, add the plugin with above command, then define an interface Window with a property corewise of data type any. Then also declare a global window variable out side of your class and then use it as follows, preferrably when the ionic platform is ready/ all plugins has been loaded to the DOM.
+For ionic 2/ typescript users, add the plugin with the same command above, then define an interface Window with a property corewise of data type any. Then also declare a global window variable out side of your class and then use it as follows, preferrably when the ionic platform is ready/ all plugins has been loaded to the DOM.
 
 	interface Window {
         corewise: any;
@@ -55,13 +56,15 @@ For ionic 2/ typescript users, add the plugin with above command, then define an
         });
     }
 
+
+# API reference
+
 Methods
 -------
 
 - CorewiseFingerprintAuth.registerFingerprint
 - CorewiseFingerprintAuth.validateFingerprint
 
-# API reference
 
 CorewiseFingerprintAuth.registerFingerprint
 ===========================================
