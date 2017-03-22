@@ -1,6 +1,6 @@
 {
   "name": "corewise-plugin-fingerprintauth",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "\n   Cordova plugin for the fingerprint authentication of the corewise android a370 tablets.\n   ",
   "cordova": {
     "id": "corewise-plugin-fingerprintauth",

@@ -14,7 +14,7 @@ The `CorewiseFingerprintAuth` object provides functions to make interacting with
 
 To add it to your project, run the command
 
-    cordova plugin add corewise-plugin-fingerprintauth
+    cordova plugin add corewise-plugin-fingerprintauth --save
 
 ionic 2 / Typescript
 --------------------
