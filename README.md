@@ -13,6 +13,49 @@ To add it to your project, run the command
 
     cordova plugin add corewise-plugin-fingerprintauth
 
+
+To add it to your project, run the command
+
+    cordova plugin add corewise-plugin-fingerprintauth
+
+For ionic 2/ typescript users, add the plugin with above command, then define an interface Window with a property corewise of data type any. Then also declare a global window variable out side of your class and then use it as follows, preferrably when the ionic platform is ready/ all plugins has been loaded to the DOM.
+
+	interface Window {
+        corewise: any;
+    }
+    declare var window : Window;
+    ...
+    export class MyClass{
+
+        this.platform.ready().then(() => {
+            
+            // to register a fingerprint
+	        window
+	        .CorewiseFingerprintAuth
+			.registerFingerprint(function(successID){
+				//on fingerprint registration success it returns the id of the fingerprint that has been stored in the flash memory
+				//do something with the id i.e. store it in a db or something
+
+			},function(error){
+			    //do some error handling
+
+			});
+
+			 // to validate a fingerprint
+	        window
+	        .CorewiseFingerprintAuth
+			.validateFingerprint(function(successID){
+				//on fingerprint validation success it returns the id of the fingerprint matched in the flash memory
+				//do something with the id i.e. store it in a db or something
+
+			},function(error){
+			    //do some error handling
+
+			});
+    ....
+        });
+    }
+
 Methods
 -------
 
