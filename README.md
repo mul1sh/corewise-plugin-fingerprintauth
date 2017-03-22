@@ -52,7 +52,6 @@ For ionic 2/ typescript users, add the plugin with above command, then define an
 			    //do some error handling
 
 			});
-    ....
         });
     }
 

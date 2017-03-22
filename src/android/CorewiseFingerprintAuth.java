@@ -8,7 +8,6 @@ import android.os.Message;
 import android.util.Log;
 import android.view.KeyEvent;
 
-
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
@@ -16,19 +15,12 @@ import org.apache.cordova.CordovaWebView;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-
-
-
 public class CorewiseFingerprintAuth extends CordovaPlugin{
-
-
     //protected MyApplication application;
     private HandlerThread handlerThread;
     private ProgressDialog progressDialog;
     private AsyncFingerprint asyncFingerprint;
     private CallbackContext callbackContext = null;
-
-
 
     @Override
     public boolean execute(String action,  JSONArray args, CallbackContext cbCtx) throws JSONException {
@@ -55,7 +47,6 @@ public class CorewiseFingerprintAuth extends CordovaPlugin{
         return true;
 
     }
-
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
@@ -65,7 +56,6 @@ public class CorewiseFingerprintAuth extends CordovaPlugin{
         handlerThread.start();
         initData();
     }
-
 
     private Handler mHandler = new Handler() {
 
@@ -114,14 +104,8 @@ public class CorewiseFingerprintAuth extends CordovaPlugin{
     private void initData() {
 
         asyncFingerprint = new AsyncFingerprint(handlerThread.getLooper(),mHandler);
-
-
         asyncFingerprint.setFingerprintType(FingerprintAPI.BIG_FINGERPRINT_SIZE);
     }
-
-
-
-
     private void showProgressDialog(String msg) {
         progressDialog = new ProgressDialog(webView.getContext());
         progressDialog.setMessage(msg);
@@ -183,7 +167,6 @@ public class CorewiseFingerprintAuth extends CordovaPlugin{
         asyncFingerprint.setStop(true);
         Log.i("whw", "onPause");
     }
-
 
 
 }
