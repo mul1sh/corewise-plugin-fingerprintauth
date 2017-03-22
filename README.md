@@ -32,27 +32,27 @@ For ionic 2/ typescript users, add the plugin with the same command above, then 
 
         this.platform.ready().then(() => {
             
-            // to register a fingerprint
-	        window
-	        .CorewiseFingerprintAuth
+			// to register a fingerprint
+			window
+			.CorewiseFingerprintAuth
 			.registerFingerprint(function(successID){
 				//on fingerprint registration success it returns the id of the fingerprint that has been stored in the flash memory
 				//do something with the id i.e. store it in a db or something
 
 			},function(error){
-			    //do some error handling
+				//do some error handling
 
 			});
 
-			 // to validate a fingerprint
-	        window
-	        .CorewiseFingerprintAuth
+			// to validate a fingerprint
+			window
+			.CorewiseFingerprintAuth
 			.validateFingerprint(function(successID){
 				//on fingerprint validation success it returns the id of the fingerprint matched in the flash memory
 				//do something with the id i.e. store it in a db or something
 
 			},function(error){
-			    //do some error handling
+				//do some error handling
 
 			});
         });
