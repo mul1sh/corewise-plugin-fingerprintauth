@@ -2,7 +2,7 @@
 
 This plugin enables fingerprint authentication for the android A370 tablets.      
 
-[More info about the tablet](https://github.com/mul1sh/corewise-fingerprintauth-demo)
+[More info about the tablet](https://www.corewise.cn/english/products/802.html)
 
 
 # Usage
