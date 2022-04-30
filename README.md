@@ -117,12 +117,4 @@ For now the plugin supports the only registering and validation of big fingerpri
 
 - For now there are no known bugs but if you do find one, please create an issue as always and I'll look into it during my spare time :)
 
-# Donate
-
-To support further development and maintenance of this plugin you can donate below
-
-[![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FU2TZH26C3HQQ)
-
-
-
 
